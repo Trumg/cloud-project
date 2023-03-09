@@ -7,7 +7,7 @@ const app = express();
 
 const MongoClient = require('mongodb').MongoClient
 
-const connectionString = ''
+const connectionString = 'mongodb+srv://duytrung:abc12345@cluster0.nf0vlh4.mongodb.net/test'
 
 // (0) CONNECT: server -> connect -> MongoDB Atlas 
 MongoClient.connect(connectionString, { useUnifiedTopology: true })
@@ -16,7 +16,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         
         // (1a) CREATE: client -> create -> database -> 'star-wars-quotes'
         // -> create -> collection -> 'quotes'
-        const db = client.db('star-wars-quotes')
+        const db = client.db('Employees-quotes')
         const quotesCollection = db.collection('quotes')
         
         // To tell Express to EJS as the template engine
